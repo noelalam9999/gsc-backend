@@ -25,7 +25,9 @@ SECRET_KEY = 'ib2et*4hhfspvelv0$k3ec!8sc(*$77&pb31b)s+mq@z$l$*rv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ci-gsc.com']
+
+
+ALLOWED_HOSTS = ['ci-gsc.com','127.0.0.1']
 
 
 # Application definition
@@ -146,3 +148,13 @@ CORS_ORIGIN_WHITELIST = [
      
      
 ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+
+#MY EMAIL SETTING
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.ci-gsc.com'  
+EMAIL_PORT = 587 
+EMAIL_HOST_USER = 'noreply@ci-gsc.com' 
+EMAIL_HOST_PASSWORD = 'Stoic93998@'
